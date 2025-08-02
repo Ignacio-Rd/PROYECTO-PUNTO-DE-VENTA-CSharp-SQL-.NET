@@ -150,11 +150,12 @@ namespace TPFinalNivel2_RuizDiaz
 
         private void REGISTRADORA_DE_COMPRAS_Load(object sender, EventArgs e)
         {
-            cbx_metododepago.Items.Add("EFECTIVO");
-            cbx_metododepago.Items.Add("DÉBITO");
-            cbx_metododepago.Items.Add("CRÉDITO");
-            cbx_metododepago.Items.Add("TRANSFERENCIA");
-            cbx_metododepago.Items.Add("MERCADO PAGO");
+            MetodoDePagoNegocio negocio = new MetodoDePagoNegocio();
+
+
+
+            cbx_metododepago.DataSource = negocio.Listametodo();
+
 
             cbx_metododepago.SelectedIndex = 0;
 
