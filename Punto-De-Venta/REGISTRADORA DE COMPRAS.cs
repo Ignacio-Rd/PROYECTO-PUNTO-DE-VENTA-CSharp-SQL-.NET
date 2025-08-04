@@ -40,9 +40,13 @@ namespace TPFinalNivel2_RuizDiaz
         {
             InitializeComponent();
             lbl_precio.Text = "0";
+            this.AcceptButton = Btn_Total;
+
 
 
         }
+
+
 
 
 
@@ -70,11 +74,12 @@ namespace TPFinalNivel2_RuizDiaz
 
             listaArticulos.Clear();
             DgvRegistradora.DataSource = null;
+            codigo_Producto.Focus();
 
-            
-            
+
+
+
         }
-
 
         private bool Procesando_Codigo = false;
 

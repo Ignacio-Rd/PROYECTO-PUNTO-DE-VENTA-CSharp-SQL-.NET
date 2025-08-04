@@ -185,7 +185,7 @@
             this.txtPrecio.Location = new System.Drawing.Point(151, 278);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(100, 20);
-            this.txtPrecio.TabIndex = 6;
+            this.txtPrecio.TabIndex = 5;
             // 
             // label4
             // 
@@ -203,7 +203,7 @@
             this.txtStock.Location = new System.Drawing.Point(151, 325);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(100, 20);
-            this.txtStock.TabIndex = 21;
+            this.txtStock.TabIndex = 6;
             // 
             // AltaArticulo
             // 

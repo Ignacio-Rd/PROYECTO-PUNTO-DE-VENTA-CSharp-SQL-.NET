@@ -19,9 +19,17 @@ namespace TPFinalNivel2_RuizDiaz
         private Dominio.Articulos articulo = null;
         private OpenFileDialog archivo = null;
 
+
         public AltaArticulo()
         {
             InitializeComponent();
+            txtCodigo.KeyDown += AltaArticulo_KeyDown;
+            txtNombre.KeyDown += AltaArticulo_KeyDown;
+            txtDescripcion.KeyDown += AltaArticulo_KeyDown;
+            cbxMarcas.KeyDown += AltaArticulo_KeyDown;
+            cbxCategoria.KeyDown += AltaArticulo_KeyDown;
+            txtPrecio.KeyDown += AltaArticulo_KeyDown;
+            txtStock.KeyDown += AltaArticulo_KeyDown;
         }
 
         public AltaArticulo(Dominio.Articulos articulo)
@@ -213,6 +221,16 @@ namespace TPFinalNivel2_RuizDiaz
             }
 
             return camposValidos;
+        }
+
+        private void AltaArticulo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.SelectNextControl((Control)sender, true, true, true, true);
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
         }
 
 
